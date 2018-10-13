@@ -1,0 +1,346 @@
+﻿.body {
+}
+
+.TableAddProject {
+    width: 800px;
+    border-collapse: collapse;
+}
+
+.TableAddProjectFenLan {
+    width: 800px;
+    height: 15px;
+    border: 1px black solid;
+    background-color: skyblue;
+    /*background: linear-gradient(to right, rgba(193,210,240,0), rgba(193,210,240,1));*/
+}
+
+.TableViewCol1BossOther {
+    width: 800px;
+    height: 25px;
+}
+
+.TableAddProjectBase {
+    width: 800px;
+    height: 346px;
+}
+
+.ProjectLSJ {
+    width: 795px;
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+.ProjectLSJXCol1 {
+    width: 50px;
+}
+
+.ProjectLSJXCol2 {
+    width: 600px;
+}
+
+.ProjectLSJXCol3 {
+    width: 150px;
+}
+
+.TableUserUp {
+    width: 800px;
+}
+
+.TableUserUpTop {
+    width: 800px;
+    height: 15px;
+    background-color: skyblue;
+}
+
+.TableUserUpTopTr {
+    width: 800px;
+    height: 30px;
+}
+
+.TableUserUpBase {
+    width: 800px;
+}
+
+.PosPage {
+    width: 800px;
+    height: 15px;
+}
+
+.PosPageCol {
+    width: 60px;
+}
+
+.PosPageCo2 {
+    width: 120px;
+}
+
+.PosPageCo3 {
+    width: 120px;
+}
+
+.PosPageCo4 {
+    width: 500px;
+}
+
+
+
+/*添加*/
+.TableView {
+    width: 800px;
+    border-collapse: collapse;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+.TableView2 {
+    width: 385px;
+    border-collapse: collapse;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+
+/*添加*/
+.TableViewCol1 {
+    width: 800px;
+    height: 20px;
+    background-color: skyblue;
+}
+
+.TableViewCol12 {
+    width: 400px;
+    height: 20px;
+    background-color: skyblue;
+}
+
+
+TableViewCol3 {
+    width: 800px;
+    height: 50px;
+}
+
+.TableViewCol2 {
+    width: 800px;
+    height: 50px;
+    border: 1px skyblue solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+.TableViewtable {
+    width: 800px;
+    height: 30px;
+}
+
+.TableViewCol3 {
+    width: 800px;
+}
+
+.TableViewBoss {
+    width: 800px;
+    border-collapse: collapse;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+
+
+/*添加*/
+.TableViewCol1Boss {
+    width: 800px;
+    height: 20px;
+    background-color: skyblue;
+}
+
+.TableViewCol1Boss2 {
+    width: 395px;
+    height: 20px;
+    background-color: skyblue;
+}
+
+
+
+/*添加*/
+.TableViewCol2Boss {
+    width: 800px;
+    height: 50px;
+    border: 1px skyblue solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+.TableViewCol2Boss2 {
+    width: 398px;
+    height: 50px;
+    border: 1px skyblue solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    /*table-layout: fixed;*/
+}
+
+
+
+
+.SearchMessage {
+    width: 800px;
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+.SearchMessageCol1 {
+    width: 50px;
+}
+
+.SearchMessageCol2 {
+    width: 300px;
+}
+
+.SearchMessageCol5 {
+    width: 300px;
+}
+
+.SearchMessageCol6 {
+    width: 150px;
+}
+
+
+.TableViewtableBoss {
+    width: 800px;
+    height: 30px;
+}
+
+/*添加test2*/
+.test1 {
+    border: 1px solid rgba(17, 148, 224, 0.20);
+    width: 800px;
+}
+
+.test2 {
+    border: 1px solid rgba(17, 148, 224, 0.20);
+    width: 390px;
+}
+
+
+
+.CaiGouTable {
+    width: 800px;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+.CaiGouTableCol {
+    width: 795px;
+    height: 30px;
+    border: 1px black solid;
+}
+
+.CaiGouTableCol2 {
+    width: 795px;
+    height: 15px;
+    background-color: skyblue;
+    border: 1px black solid;
+}
+
+.MoneyControl {
+    width: 800px;
+    height: 30px;
+    border: 1px black solid;
+}
+
+.MoneyControlCol1 {
+    width: 580px;
+    height: 30px;
+}
+
+.MoneyControlCol2 {
+    width: 80px;
+    height: 30px;
+}
+
+.MoneyControlCol3 {
+    width: 120px;
+    height: 30px;
+}
+
+.MoneyControlCol4 {
+    width: 20px;
+    height: 30px;
+}
+
+.AssTable {
+    width: 700px;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+.AssTableCol1 {
+    width: 150px;
+}
+
+.AssTableCol2 {
+    width: 200px;
+}
+
+.AssTableCol3 {
+    width: 200px;
+}
+
+.AssTableCol4 {
+    width: 150px;
+}
+
+.Review {
+    width: 800px;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+ReviewCol1 {
+    width: 200px;
+    height: 30px;
+}
+
+ReviewCol2 {
+    width: 600px;
+    height: 30px;
+}
+
+.left {
+    margin: 10px 0;
+    border-style: dashed;
+    height: 100%;
+    width: 45%;
+    float: left;
+}
+
+.Div2 {
+    margin: 10px 0;
+    border-style: dashed;
+    height: 50%;
+    width: 45%;
+    float: right;
+}
+
+.middle {
+    margin: 0 25% 0 25%;
+    padding: 10px 10px;
+    border-style: dashed;
+    height: 500px;
+}

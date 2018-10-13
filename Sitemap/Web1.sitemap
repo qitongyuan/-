@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="功能导航"  description="功能导航">
+    <siteMapNode url="~/HenuUI/RelevantDeparment/FacilityOffice/FacOffBacklog2.aspx" title="待办事项" description="待办事项"/>
+    <siteMapNode url="~/HenuUI/RelevantDeparment/FacilityOffice/FacOffInquiry2.aspx" title="审批查询" description="审批查询"/>
+    <siteMapNode url="" title="用户信息"  description="用户信息">
+      <siteMapNode url="~/HenuUI/RelevantDeparment/FacilityOffice/FacMesUpdate2.aspx" title="信息修改" description="信息修改"/>
+      <siteMapNode url="~/HenuUI/RelevantDeparment/FacilityOffice/FacPsdUpdate2.aspx" title="密码修改" description="密码修改"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

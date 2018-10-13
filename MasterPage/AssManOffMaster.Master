@@ -1,0 +1,226 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AssManOffMaster.master.cs" Inherits="UI.MasterPage.AssManOffMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=PageTitle %></title>
+    <link href="../CSS/MasterControl.css" rel="stylesheet" />
+    <link href="../CSS/zzsc.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     <script type="text/javascript">
+         //$(function () {
+         //    $(".subNav").click(function () {
+         //        $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+         //        $(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+
+         //        // 修改数字控制速度， slideUp(500)控制卷起速度
+         //        $(this).next(".navContent").slideToggle(100).siblings(".navContent").slideUp(100);
+         //    })
+         //})
+
+         function getQueryString(name) {
+             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+             var r = window.location.search.substr(1).match(reg);
+             if (r != null) {
+                 return unescape(r[2]);
+             }
+             return null;
+         }
+
+         function setURL() 
+         {
+             var str = document.URL;
+             var arr = str.split("/");
+             var curDir = arr[arr.length - 2];
+            
+             var daiban = document.getElementById("daiban");
+             var chaxun = document.getElementById("chaxun");
+             var tongji = document.getElementById("tongji");
+             var userchakan = document.getElementById("userchakan");
+             var passwordxiugai = document.getElementById("passwordxiugai");
+             
+             var bumenchakan = document.getElementById("bumenchakan");
+             var bumenadd = document.getElementById("bumenadd");
+             var quanxianguanli = document.getElementById("quanxianguanli");
+             var shenpiliucheng = document.getElementById("shenpiliucheng");
+             var shujuguanli = document.getElementById("shujuguanli");
+             if (curDir == "AssetManageOffice")
+             {
+                 daiban.href = "AssManOffBacklog.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 chaxun.href = "AssManOffInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 tongji.href = "Statistics.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 beian.href = "RecordReportInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 userchakan.href = "AssMesUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 passwordxiugai.href = "AssPsdUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 userresaerch.href = "Userresearch.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 //useradd.href = "Useradd.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 
+                 bumenguanli.href = "Depresearch.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 bumenadd.href = "Adddepfirst.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 quanxianguanli.href = "RoleManage.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                     //bumenguanli.href = "Depusermanage.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+
+                 shenpiliucheng.href = "AddApprovalFlow.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 //shenpiliuchengguanli.href = "ApprovalFlowManager.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 shujuguanli.href = "DataManagement.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+             }
+             else
+             {
+                 daiban.href = "../AssManOffBacklog.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 chaxun.href = "../AssManOffInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 tongji.href = "../AssManOffInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 beian.href = "../RecordReportInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 userchakan.href = "../AssMesUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 passwordxiugai.href = "../AssPsdUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 userresaerch.href = "../Userresearch.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 //useradd.href = "../Useradd.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+
+                 bumenguanli.href = "../Depresearch.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 bumenadd.href = "../Adddepfirst.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 quanxianguanli.href = "../RoleManage.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 //bumenguanli.href = "../Depusermanage.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                 shenpiliucheng.href = "../AddApprovalFlow.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 shenpiliuchengguanli.href = "../ApprovalFlowManager.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+                 shujuguanli.href = "../DataManagement.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&RoleMode=" + getQueryString("RoleMode");
+             }
+
+             var selectedID = getQueryString("Selected");
+             if (selectedID != null) {
+                 var temp = document.getElementById(selectedID);
+                 temp.style.backgroundColor = "#AADEE1";
+             }
+         }
+
+         function chaxun(obj) {
+             obj.href = obj.href + "&Selected=" + obj.id;
+         }
+    </script>
+</head>
+<body class="body" onload="setURL();">
+    <form id="form1" runat="server">
+        <div align="center">
+            <div class="Top">
+               <%-- <table class="TopTable">
+                    <tr class="TopTable">
+                        <td class="TopTableCOl1"></td>
+                        <td class="TopTableCOl2">河南大学国有资产办事处</td>
+                        <td class="TopTableCOl3">
+                            <asp:Label ID="lb_userName" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td class="TopTableCOl4">当前时间：</td>
+                        <td class="TopTableCOl5">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:Label ID="lb_time" runat="server" Text="Label"></asp:Label>
+                                    <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </td>
+                        <td class="TopTableCOl6">安全退出</td>
+                    </tr>
+                </table>--%>
+                <table class="TopTable">
+                    <tr class="TopTable">
+                        <td class="TopTableCOl1"></td>
+                        <td  width="140px" height="60px"  >
+                            登录部门：<asp:Label ID="lb_OrgName" runat="server" Text="Label"></asp:Label>
+                        </td>
+                         <td  width="140px" height="60px"  >
+                            部门类型：<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td width="150px" height="60px" >
+                            操作员：<asp:Label ID="lb_TrueName" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td width="90px" height="60px"><%--当前时间：--%></td>
+                        <td width="130px" height="60px">
+                           <%-- <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:Label ID="lb_time" runat="server" Text="Label"></asp:Label>
+                                    <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>--%>
+                        </td>
+                        <td align="right" width="90px" height="60px">
+                              <asp:LinkButton ID="LBSaveExit" runat="server" OnClick="LBSaveExit_Click">安全退出</asp:LinkButton>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+            <%--<div class="TopToMiddle" align="left">
+                您当前的位置是：  <asp:Label ID="LbLocation" runat="server" Text="Label"></asp:Label>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>--%>
+            <div class="Left" align="left">
+                  <div class="subNavBox">
+	                <div class="subNav currentDd currentDt">待办与查询</div>
+	                <ul class="navContent " style="display:block">
+                        <li><a id="daiban" onclick="chaxun(this)" href="#">审批待办</a></li>
+                        <li><a id="beian" onclick="chaxun(this)" href="#">备案待办</a></li>
+                        <li><a id="chaxun" onclick="chaxun(this)" href="#">申报查询</a></li>
+                        <li><a id="shujuguanli" onclick="chaxun(this)" href="#">数据管理</a></li>
+                        <li><a id="tongji" onclick="chaxun(this)" href="#">统计</a></li>
+	                </ul>
+	                <div class="subNav currentDd currentDt">个人信息管理</div>
+	                <ul class="navContent" style="display:block">
+			                <li><a id="userchakan" onclick="chaxun(this)" href="#">个人信息查看</a></li>
+			                <li><a id="passwordxiugai" onclick="chaxun(this)" href="#">密码修改</a></li>
+	                </ul>
+                         <div class="subNav currentDd currentDt">用户管理</div>
+	                <ul class="navContent" style="display:block">
+			                <li><a id="userresaerch" onclick="chaxun(this)" href="#">用户密码管理</a></li>
+			                <%--<li><a id="useradd" onclick="chaxun(this)" href="#">添加用户</a></li>--%>
+	                </ul>
+	                <div class="subNav currentDd currentDt">部门管理</div>
+	                <ul class="navContent" style="display:block">
+                      <li><a id="bumenguanli" onclick="chaxun(this)" href="#">部门用户管理</a></li>
+
+<%--			                <li><a id="bumenchaxun" onclick="chaxun(this)" href="#">部门查询</a></li>--%>
+			                <li><a id="bumenadd" onclick="chaxun(this)" href="#">设置二级部门</a></li>
+                         <li><a id="quanxianguanli" onclick="chaxun(this)" href="#">权限管理</a></li>
+	                </ul>
+                    <div class="subNav currentDd currentDt">流程管理</div>
+                    <ul class="navContent" style="display:block">
+                            <li><a id="shenpiliucheng"onclick="chaxun(this)"  href="#">添加审批流程</a></li>
+                            <li><a id="shenpiliuchengguanli"onclick="chaxun(this)"  href="#">审批流程管理</a></li>
+	                </ul>
+                      <div class="subNav currentDd currentDt">使用帮助</div>
+                      <ul class="navContent" style="display:block">
+                            <li><a id="A1"  href="AssetManageOfficeUserBook.htm">使用帮助</a></li>
+	                </ul>
+                </div>      
+            </div>
+
+                <%--<asp:TreeView ID="TreeView1" runat="server" Width="200px">
+                    <Nodes>
+                        <asp:TreeNode Text="代办事项" Value="代办事项" NavigateUrl="~/HenuUI/AssetManageOffice/AssManOffBacklog.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="审批查询" Value="审批查询" NavigateUrl="~/HenuUI/AssetManageOffice/AssManOffInquiry.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="用户信息修改" Value="用户信息修改">
+                            <asp:TreeNode NavigateUrl="~/HenuUI/AssetManageOffice/AssMesUpdate.aspx" Text="信息修改" Value="信息修改"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/HenuUI/AssetManageOffice/AssPsdUpdate.aspx" Text="密码修改" Value="密码修改"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="部门信息管理" Value="部门信息管理" NavigateUrl="~/HenuUI/AssetManageOffice/DepartmentMessageManage/DepMesAdd.aspx"></asp:TreeNode>
+                    </Nodes>
+                </asp:TreeView>--%>
+             <%--   <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ForeColor="Black">
+                     <ParentNodeStyle Font-Bold="True" />
+                    <RootNodeStyle Font-Bold="True" />
+                    <SelectedNodeStyle BackColor="Aqua" BorderColor="Blue" BorderStyle="Groove" BorderWidth="1px" ForeColor="Black" />
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </div>--%>
+            <div class="Right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

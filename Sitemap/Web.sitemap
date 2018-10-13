@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="功能列表"  description="功能列表">
+    <siteMapNode url="~/HenuUI/Requisitioner/DeclareDemand.aspx" title="申报查询"  description="申报查询" />
+    <siteMapNode url="" title="添加申报"  description="添加申报">
+      <siteMapNode url="~/HenuUI/Requisitioner/AddDeclare.aspx" title="货物与服务"  description="货物与服务" />
+      <siteMapNode url="~/HenuUI/Requisitioner/AddProject.aspx" title="基建维修工程"  description="基建维修工程" />
+    </siteMapNode>
+    <siteMapNode url="" title="用户信息"  description="用户信息">
+      <siteMapNode url="~/HenuUI/Requisitioner/ReqMesUpdate.aspx" title="信息查看"  description="信息查看" />
+      <siteMapNode url="~/HenuUI/Requisitioner/ReqPsdUpdate.aspx" title="密码修改"  description="密码修改" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FacOffMaster.master.cs" Inherits="UI.MasterPage.FacOffMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>河南大学政府采购申报管理系统-归口部门-设备处-申报认证审批</title>
+
+    <link href="../CSS/MasterControl.css" rel="stylesheet" />
+    <link href="../CSS/MasterControl.css" rel="stylesheet" />
+    <link href="../CSS/zzsc.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     <script type="text/javascript">
+         //$(function () {
+         //    $(".subNav").click(function () {
+         //        $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+         //        $(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+
+         //        // 修改数字控制速度， slideUp(500)控制卷起速度
+         //        $(this).next(".navContent").slideToggle(100).siblings(".navContent").slideUp(100);
+         //    })
+         //})
+
+         function getQueryString(name) {
+             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+             var r = window.location.search.substr(1).match(reg);
+             if (r != null) {
+                 return unescape(r[2]);
+             }
+             return null;
+         }
+
+         function setURL() {
+             var str = document.URL;
+             var arr = str.split("/");
+             var curDir = arr[arr.length - 2];
+
+             var daiban = document.getElementById("daiban");
+             var chaxun = document.getElementById("chaxun");
+             var chakan = document.getElementById("chakan");
+             var mima = document.getElementById("mima");
+
+             if (curDir == "FacilityOffice") {
+                     daiban.href = "FacOffBacklog.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                     chaxun.href = "FacOffInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                     chakan.href = "FacMesUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&type=1";
+                     mima.href = "FacPsdUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID") + "&type=1";
+             }
+             else {
+                     daiban.href = "../FacilityOffice/FacOffBacklog.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                     chaxun.href = "../FacilityOffice/FacOffInquiry.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                     chakan.href = "../FacilityOffice/FacMesUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+                     mima.href = "../FacilityOffice/FacPsdUpdate.aspx?UserName=" + getQueryString("UserName") + "&OrganizationID=" + getQueryString("OrganizationID");
+             }
+             var selectedID = getQueryString("Selected");
+             if (selectedID != null) {
+                 var temp = document.getElementById(selectedID);
+                 temp.style.backgroundColor = "#AADEE1";
+             }
+         }
+         function chaxun(obj) {
+             obj.href = obj.href + "&Selected=" + obj.id;
+         }
+    </script>
+</head>
+<body class="body" onload="setURL();">
+    <form id="form1" runat="server" >
+        <div align="center">
+            <div class="Top">
+               
+                 <table class="TopTable">
+                    <tr class="TopTable">
+                         <td class="TopTableCOl1"></td>
+                        <td  width="300px" height="60px"  >
+                           归口部门名称：<asp:Label ID="lb_OrgName" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td width="130px" height="60px" align="center">
+                            操作员：<asp:Label ID="lb_TrueName" runat="server" Text="Label"></asp:Label>
+                        </td>
+                        <td width="85px" height="60px" align="right"><%--当前时间：--%></td>
+                        <td width="150px" height="60px">
+                           <%-- <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:Label ID="lb_time" runat="server" Text="Label"></asp:Label>
+                                    <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>--%>
+                        </td>
+                        <td align="right" width="85px" height="60px">
+                            <asp:LinkButton ID="LBSaveExit" runat="server" OnClick="LBSaveExit_Click">安全退出</asp:LinkButton>
+                            </td>
+                    </tr>
+                </table>
+
+            </div>
+           <%-- <div class="TopToMiddle" align="left">
+                 您当前的位置是：
+                <asp:Label ID="LbLocation" runat="server" Text="Label"></asp:Label>
+            </div>--%>
+          <div class="Left" align="left">
+                <div class="subNavBox">
+	                <div class="subNav currentDd currentDt">待办与查询</div>
+	                <ul class="navContent " style="display:block">
+			                <li><a id="daiban" onclick="chaxun(this)" href="#">待办事项</a></li>
+                            <li><a id="chaxun" onclick="chaxun(this)" href="#">审批查询</a></li>
+	                </ul>
+	                <div class="subNav currentDd currentDt">用户信息</div>
+	                <ul class="navContent" style="display:block">
+			                <li><a id="chakan" onclick="chaxun(this)" href="#">信息查看</a></li>
+			                <li><a id="mima" onclick="chaxun(this)" href="#">密码修改</a></li>
+	                </ul>
+                </div>
+
+            </div>
+            <div class="Right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

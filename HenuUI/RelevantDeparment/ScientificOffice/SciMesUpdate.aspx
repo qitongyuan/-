@@ -1,0 +1,92 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/SciOffMaster.Master" AutoEventWireup="true" CodeBehind="SciMesUpdate.aspx.cs" Inherits="UI.HenuUI.RelevantDeparment.ScientificOffice.SciMesUpdate" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 30px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link href="../../../CSS/ContentControl.css" rel="stylesheet" />
+    <table class="TableUserUp" align="center" border="0">
+        <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;">部门名称：</td>
+            <td align="left" width="200" style="border: thin groove #000000">
+                <asp:TextBox ID="lb_OrganizationId" runat="server" Text="" Enabled="False"></asp:TextBox>
+            </td>
+            <td width="100"></td>
+             <td width="100"></td>
+             <td width="70"></td>
+             <td width="100"></td>
+               <td width="100"></td>
+        </tr>
+       
+          <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;">部门类型：</td>
+            <td align="left" width="200" style="border: thin groove #000000">
+                <asp:TextBox ID="Lb_OrgType" runat="server" Text="" Enabled="False"></asp:TextBox>
+            </td>
+             <td width="100"></td>
+             <td width="100"></td>
+             <td width="70"></td>
+             <td width="100"></td>
+             <td width="100"></td>
+        
+        </tr>
+         <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;">登录名：</td>
+            <td align="left" width="200" style="border: thin groove #000000">
+                <asp:TextBox ID="lb_UserId" runat="server" Text="" Enabled="False"></asp:TextBox>
+            </td>
+              <td width="100"></td>
+         <td width="100"></td>
+             <td width="70"></td>
+             <td width="100"></td>
+             <td width="100"></td>
+        </tr>
+        <%-- <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;">登录密码：</td>
+            <td align="left" width="200" style="border: thin groove #000000">
+                <asp:TextBox ID="lb_Password" runat="server" Text="" Enabled="False"></asp:TextBox>
+            </td>
+              <td width="100"></td>
+         <td width="100"></td>
+             <td width="70"></td>
+             <td width="100"></td>
+             <td width="100"></td>
+        </tr>--%>
+        <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;" class="auto-style1">
+                <asp:Label ID="Label1" runat="server" Text="操作员姓名："></asp:Label>
+            </td>
+            <td align="left" width="100" style="border: thin groove #000000" class="auto-style1">
+                <asp:TextBox ID="lb_TrueName" runat="server" Enabled="False"></asp:TextBox>
+            </td>
+             <td width="100" class="auto-style1"></td>
+             <td width="100" class="auto-style1"></td>
+             <td width="70" class="auto-style1"></td>
+       <td width="100" class="auto-style1"></td>
+             <td width="100" class="auto-style1"></td>
+        </tr>
+        <tr class="TableUserUpTopTr">
+            <td align="right" width="130" style="border: thin groove #000000; background-color: #e8e8e8;">
+                <asp:Label ID="Label2" runat="server" Text="联系电话："></asp:Label>
+            </td>
+            <td align="left" width="200" style="border: thin groove #000000">
+               <asp:TextBox ID="lb_Phone" runat="server" Enabled="False"></asp:TextBox>
+                
+            
+            </td>
+             <td width="100"></td>
+             <td width="100"></td>
+             <td width="70"></td>
+               <td width="100"></td>
+        
+             <td width="100"></td>
+        </tr>      
+         <tr class="TableUserUpTopTr">
+            <td align="left" colspan="8">如需修改操作员姓名或联系方式，请与管理员联系！</td>
+               
+        </tr>                
+    </table>
+</asp:Content>
